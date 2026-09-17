@@ -50,6 +50,7 @@ public class DemoApplication {
 	@GetMapping("/devops")
 	String turma(){
 		return "Zumbi";
+		return "Teste 1";
 	}
 	
 	@GetMapping("/autoglass")
@@ -69,9 +70,7 @@ public class DemoApplication {
 	
 	@GetMapping("/UFSCAR")
 	String UFSCAR(){
-		return "Turma UFSCAR 2026";
-		return "Teste 1";
-		return "Teste 2";
+		return "Turma UFSCAR 2026";		
 	}
 	
-}	
+}
