@@ -49,8 +49,7 @@ public class DemoApplication {
 	
 	@GetMapping("/devops")
 	String turma(){
-		return "Zumbi";
-		return "Teste 1";
+		return "Zumbilandio2";
 	}
 	
 	@GetMapping("/autoglass")
