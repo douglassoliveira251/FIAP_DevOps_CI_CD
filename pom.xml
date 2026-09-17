@@ -18,7 +18,7 @@
 
 	<properties>
 		<java.version>21</java.version>
-		<sonar.organization>devopsmbalearning</sonar.organization>
+		<sonar.organization>FIAP_DevOps_CI_CD</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
