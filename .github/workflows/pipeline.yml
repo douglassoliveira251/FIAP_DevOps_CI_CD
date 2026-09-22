@@ -209,3 +209,24 @@ jobs:
         shell: bash 
         run: | 
           echo "Testes Perfomance"
+ 
+  deploy-azure: 
+    needs: build  
+    name: Deploy-azure 
+    runs-on: ubuntu-latest 
+    if: github.ref == 'refs/heads/main'    
+    environment: 
+      name: AZURE-PRO        
+      url: https://devops-fiap-on-app-bre5e5e7ffeyc3b0.northcentralus-01.azurewebsites.net/
+    steps: 
+        - name: Download JAR 
+          uses: actions/download-artifact@v3 
+          with: 
+            name: artifact 
+            path: target/  
+        - name: DeployAzure   
+          uses: azure/webapps-deploy@v2 
+          with: 
+            app-name: devopsfiap-on-app 
+            publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }} 
+            package: '${{ github.workspace }}/target/*.jar'
