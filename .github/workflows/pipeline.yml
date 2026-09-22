@@ -220,7 +220,7 @@ jobs:
       url: https://devops-fiap-on-app-bre5e5e7ffeyc3b0.northcentralus-01.azurewebsites.net/
     steps: 
         - name: Download JAR 
-          uses: actions/download-artifact@v3 
+          uses: actions/download-artifact@v4 
           with: 
             name: artifact 
             path: target/  
